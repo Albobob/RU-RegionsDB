@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from base import Base
 
+
 class TerritorialUnit(Base):
     __tablename__ = 'territorial_unit'
 
@@ -14,3 +15,6 @@ class TerritorialUnit(Base):
     district = relationship('District', backref='territorial_unit')
     geo_category = relationship('GeoCategory', backref='territorial_units')
 
+    def __repr__(self):
+        return f"<TerritorialUnit(id={self.id}, name_ru='{self.name_ru}', name_eng='{self.name_eng}', " \
+               f"short_name_ru='{self.short_name_ru}', short_name_eng='{self.short_name_eng}')>"

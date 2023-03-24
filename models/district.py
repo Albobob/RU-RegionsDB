@@ -17,3 +17,8 @@ class District(Base):
     rus_total = relationship('RusTotal', backref='districts')
     geo_category = relationship('GeoCategory', backref='districts')
 
+    def __repr__(self):
+        return f"<District(id={self.id}, name_ru='{self.name_ru}', name_eng='{self.name_eng}', " \
+               f"short_name_ru='{self.short_name_ru}', short_name_eng='{self.short_name_eng}', " \
+               f"rus_total_id={self.rus_total_id}, geo_category_id={self.geo_category_id})>"
+
