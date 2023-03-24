@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from base import Base
+from models.base import Base
+
 
 class RusTotal(Base):
     __tablename__ = 'rus_total'
@@ -14,4 +15,3 @@ class RusTotal(Base):
     def __repr__(self):
         return f"<RusTotal(id={self.id}, name_ru='{self.name_ru}', name_eng='{self.name_eng}', " \
                f"short_name_ru='{self.short_name_ru}', short_name_eng='{self.short_name_eng}')>"
-

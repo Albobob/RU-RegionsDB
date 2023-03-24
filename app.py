@@ -1,14 +1,10 @@
-# -*- coding: utf-8 -*-
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from models.base import Base
-import database
 
+# Создаем соединение с базой данных
+SQLALCHEMY_DATABASE_URI = 'sqlite:///database.db'
+engine = create_engine(SQLALCHEMY_DATABASE_URI)
 
-engine = database.engine
-
-Session = sessionmaker(bind=engine)
-
-# Создаем таблицы в базе данных
+# Создаем экземпляр класса, который будет использован для определения таблиц в базе данных
 Base.metadata.create_all(engine)
