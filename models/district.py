@@ -1,6 +1,9 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from models.base import Base
+from models.rus_total import RusTotal
+
+
 
 
 class District(Base):
@@ -11,7 +14,7 @@ class District(Base):
     name_eng = Column(String(500))
     short_name_ru = Column(String(8))
     short_name_eng = Column(String(10))
-    rus_total_id = Column(Integer, ForeignKey('rus_total.id'), nullable=False)
+    rus_total_id = Column(Integer, ForeignKey(RusTotal.id), nullable=False)
     geo_category_id = Column(Integer, ForeignKey('geo_category.id'), nullable=False)
 
     rus_total = relationship('RusTotal', backref='districts')
