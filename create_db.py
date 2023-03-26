@@ -136,7 +136,7 @@ territorial_units = [
     ("Хабаровский край", "Khabarovsk Territory", 8, 4),
     ("Амурская область", "Amur Region", 8, 6),
     ("Магаданская область", "Magadan Region", 8, 6),
-    ("Сахалинская область", "Sakhalin Region", 7, 6),
+    ("Сахалинская область", "Sakhalin Region", 8, 6),
     ("Еврейская автономная область", "Jewish Autonomous Region", 8, 7),
     ("Чукотский автономный округ", "Chukotka Autonomous Area", 8, 5)
 ]
