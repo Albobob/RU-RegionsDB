@@ -7,12 +7,12 @@ class GeoCategory(Base):
     __tablename__ = 'geo_category'
 
     id = Column(Integer, primary_key=True)
-    rus_name = Column(String(500))
-    eng_name = Column(String(500))
+    name_ru = Column(String(500))
+    name_eng = Column(String(500))
 
-    # rus_total = relationship('RusTotal', backref='geo_category')
-    districts = relationship('District', back_populates='geo_category')
-    # territorial_unit = relationship('TerritorialUnit', backref='geo_category')
+    def __init__(self, name_ru, name_eng):
+        self.name_ru = name_ru
+        self.name_eng = name_eng
 
     def __repr__(self):
         return f"<GeoCategory(id={self.id}, name={self.name}, name_eng={self.name_eng})>"

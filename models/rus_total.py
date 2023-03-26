@@ -9,9 +9,10 @@ class RusTotal(Base):
     id = Column(Integer, primary_key=True)
     name_ru = Column(String(500), nullable=False)
     name_eng = Column(String(500))
-    geo_category_id = Column(Integer, ForeignKey('geo_category.id'), nullable=False)
 
-    districts = relationship('District', backref='rus_total')
+    geo_category_id = Column(Integer, ForeignKey('geo_category.id'), nullable=False)
+    geo_category = relationship('GeoCategory', backref='rus_total')
+
 
     def __init__(self, name_ru, name_eng, geo_category_id):
         self.name_ru = name_ru

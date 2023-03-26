@@ -11,11 +11,12 @@ class District(Base):
     name_eng = Column(String(500))
     short_name_ru = Column(String(8))
     short_name_eng = Column(String(10))
-    rus_total_id = Column(Integer, ForeignKey('rus_total.id'), nullable=False)
-    geo_category_id = Column(Integer, ForeignKey('geo_category.id'), nullable=False)
 
-    # rus_total = relationship('RusTotal', back_populates='districts')
-    geo_category = relationship('GeoCategory', back_populates='districts')
+    rus_total_id = Column(Integer, ForeignKey('rus_total.id'), nullable=False)
+    rus_total = relationship('RusTotal', backref='districts')
+    geo_category_id = Column(Integer, ForeignKey('geo_category.id'), nullable=False)
+    geo_category = relationship('GeoCategory', backref='districts')
+
 
     def __init__(self, name_ru, name_eng=None, short_name_ru=None, short_name_eng=None, rus_total_id=None,
                  geo_category_id=None):
