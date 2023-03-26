@@ -88,7 +88,7 @@ territorial_units = [
     ('Севастополь', 'City of Sevastopol', 3, 8),
 
     ('Республика Дагестан', 'Republic of Dagestan', 4, 3),
-    ('Ингушетия', 'Ingushetia', 4, 3),
+    ('Республика Ингушетия', 'Republic of Ingushetia', 4, 3),
     ('Кабардино-Балкарская Республика', 'Kabardino-Balkarian Republic', 4, 3),
     ('Карачаево-Черкесская Республика', 'Karachayevo-Circassian Republic', 4, 3),
     ('Республика Северная Осетия — Алания', 'Republic of North Ossetia – Alania', 4, 3),
@@ -119,10 +119,10 @@ territorial_units = [
 
     ("Республика Алтай", "Altai Republic", 7, 3),
     ("Республика Тыва", "Tuva Republic", 7, 3),
-    ("Республика Хакасия", "Khakassia Republic", 7, 4),
+    ("Республика Хакасия", "Khakassia Republic", 7, 3),
     ("Алтайский край", "Altai Territory", 7, 4),
     ("Красноярский край", "Krasnoyarsk Territory", 7, 4),
-    ("Иркутская область", "Irkutsk Region", 7, 4),
+    ("Иркутская область", "Irkutsk Region", 7, 6),
     ("Кемеровская область", "Kemerovo Region", 7, 4),
     ("Новосибирская область", "Novosibirsk Region", 7, 6),
     ("Омская область", "Omsk Region", 7, 6),
