@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from database.models.base import Base
+from .base import Base
 
 
 class District(Base):
@@ -21,4 +21,3 @@ class District(Base):
         return f"<District(id={self.id}, name_ru='{self.name_ru}', name_eng='{self.name_eng}', " \
                f"short_name_ru='{self.short_name_ru}', short_name_eng='{self.short_name_eng}', " \
                f"rus_total_id={self.rus_total_id}, geo_category_id={self.geo_category_id})>"
-

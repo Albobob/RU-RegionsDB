@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from database.models.base import Base
+from models.base import Base
 
 class GeoCategory(Base):
     __tablename__ = 'geo_category'
