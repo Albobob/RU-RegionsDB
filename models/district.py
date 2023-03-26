@@ -17,6 +17,14 @@ class District(Base):
     # rus_total = relationship('RusTotal', back_populates='districts')
     geo_category = relationship('GeoCategory', back_populates='districts')
 
+    def __init__(self, name_ru, name_eng=None, short_name_ru=None, short_name_eng=None, rus_total_id=None,
+                 geo_category_id=None):
+        self.name_ru = name_ru
+        self.name_eng = name_eng
+        self.short_name_ru = short_name_ru
+        self.short_name_eng = short_name_eng
+        self.rus_total_id = rus_total_id
+        self.geo_category_id = geo_category_id
 
     def __repr__(self):
         return f"<District(id={self.id}, name_ru='{self.name_ru}', name_eng='{self.name_eng}', " \

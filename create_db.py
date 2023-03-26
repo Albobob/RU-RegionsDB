@@ -23,10 +23,13 @@ categories = [('Страна', 'Country'),
               ('Город федерального значения', 'City'),
               ]
 
-
+# Добавляем виды территориального деления
 for category in categories:
     gc = GeoCategory(rus_name=category[0], eng_name=category[1])
     session.add(gc)
+
+# Добавляем РФ
+session.add(RusTotal('Российская Федерация', 'Russian Federation', 1))
 
 districts = [('Центральный федеральный округ', 'Central Federal District', 'ЦФО', 'CFD'),
              ('Северо-Западный федеральный округ', 'Northwestern Federal District', 'СЗФО', 'NW-FD'),
@@ -37,9 +40,10 @@ districts = [('Центральный федеральный округ', 'Centr
              ('Сибирский федеральный округ', 'Siberian Federal District', 'СФО', 'SFD'),
              ('Дальневосточный федеральный округ', 'Fareast Federal District', 'ДФО', 'FED')]
 
-
-
-
+# Добавляем округа
+for district in districts:
+    ds = District(district[0], district[1], district[2], district[3], 1, 2)
+    session.add(ds)
 
 session.commit()
 session.close()
