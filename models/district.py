@@ -14,8 +14,9 @@ class District(Base):
     rus_total_id = Column(Integer, ForeignKey('rus_total.id'), nullable=False)
     geo_category_id = Column(Integer, ForeignKey('geo_category.id'), nullable=False)
 
-    rus_total = relationship('RusTotal', backref='districts')
-    geo_category = relationship('GeoCategory', backref='districts')
+    # rus_total = relationship('RusTotal', back_populates='districts')
+    geo_category = relationship('GeoCategory', back_populates='districts')
+
 
     def __repr__(self):
         return f"<District(id={self.id}, name_ru='{self.name_ru}', name_eng='{self.name_eng}', " \
