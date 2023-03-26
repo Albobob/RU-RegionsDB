@@ -1,9 +1,6 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from models.base import Base
-
-
-
+from database.models.base import Base
 
 
 class District(Base):
